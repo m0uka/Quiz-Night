@@ -1,0 +1,251 @@
+﻿@import "Theme.scss";
+
+LobbyScreen {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(black, 0.90);
+  pointer-events: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 85%;
+    height: 80%;
+  }
+}
+
+SettingsContainer {
+  width: 80%;
+  height: 100%;
+  background-color: $primary;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  
+  margin-right: 50px;
+  
+  padding-left: 30px;
+  padding-right: 30px;
+
+  border-radius: 20px;
+  
+  .title {
+    color: $text;
+    font-size: 40px;
+    margin-top: 15px;
+  }
+  
+  .startBtn {
+    background-color: $blue;
+    margin-top: 15px;
+    height: 50px;
+    
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    
+    color: $text;
+    border-radius: 30px;
+    font-size: 30px;
+    
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $aqua;
+    }
+  }
+  
+  .container {
+    width: 100%;
+    
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: $secondary;
+    
+    padding: 15px 20px 20px 20px;
+    
+    border-radius: 20px;
+
+    &.difficulty {
+      height: 15%;
+    }
+
+    &.category {
+      height: 63%;
+    }
+    
+    .label {
+      color: $text;
+      font-size: 24px;
+    }
+    
+    .desc {
+      margin-top: 5px;
+      color: $text;
+      font-size: 14px;
+    }
+
+    .btn {
+      background-color: $tertiary;
+      width: 100%;
+
+      margin: 6px;
+      box-shadow: $shadow;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $aqua;
+      }
+
+      &.selected {
+        background-color: $blue;
+      }
+
+      align-items: center;
+      justify-content: center;
+
+      Label {
+        width: 100%;
+        color: $text;
+        font-size: 28px;
+
+        text-align: center;
+      }
+    }
+    
+    
+    .contents {
+      margin-top: 14px;
+      height: 90%;
+
+      &.categoryContents {
+        flex-direction: row;
+
+        .column {
+          width: 100%;
+          flex-direction: column;
+          margin: 4px;
+          
+          .row {
+            width: 100%;
+            height: 50px;
+            margin: 4px;
+            
+            .rowBtn {
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+              background-color: $tertiary;
+              
+              &:hover {
+                background-color: $aqua;
+              }
+              
+              &.selected {
+                background-color: $blue;
+              }
+
+              align-items: center;
+              justify-content: center;
+              
+              Label {
+                text-align: center;
+
+                color: $text;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+      
+      
+    }
+    
+  }
+  
+  
+  
+}
+
+PlayerList {
+  width: 22%;
+  height: 100%;
+  background-color: $primary;
+  box-shadow: $shadow;
+  font-family: "Poppins", sans-serif;
+  border-radius: 30px;
+  
+  .title {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    position: absolute;
+    font-size: 34px;
+    color: $text;
+  }
+  
+  .playerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+    background-color: $secondary;
+    border-radius: 0 0 30px 30px;
+    
+    .bottom {
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      background-color: $primary;
+      
+      bottom: 0px;
+      border-radius: 0 0 30px 30px;
+      
+      color: $text;
+      font-size: 24px;
+      
+      Label {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 5px;
+        width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    .entries {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      
+      .entry {
+        background-color: $blue;
+        display: flex;
+        height: 80px;
+        margin-bottom: 6px;
+        align-items: center;
+        justify-content: start;
+        text-align: left;
+
+        .avatar {
+          height: 60px;
+          width: 60px;
+          border-radius: 100%;
+          margin-left: 20px;
+        }
+
+        .name {
+          margin-left: 16px;
+          font-size: 30px;
+          color: $text;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+  
+{
+    "name": "quiznight",
+    "version": "1.0",
+    "sharedassets": "*.*",
+    
+    "depends": 
+    [
+      "base",
+      "citizen",
+      "rust"
+    ],
+
+    "gamemodes":
+    [
+      {
+        "name": "quiznight",
+        "title": "Quiz Night",
+        "description": "A classic party quiz game!"
+      }
+    ]
+}
