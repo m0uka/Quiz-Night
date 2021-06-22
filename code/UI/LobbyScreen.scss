@@ -52,8 +52,18 @@ SettingsContainer {
     
     cursor: pointer;
     
+    &.disabled {
+      cursor: default;
+      background-color: rgba($aqua, 0.20);
+      color: rgba($text, 0.50);
+    }
+    
     &:hover {
       background-color: $aqua;
+      
+      &.disabled {
+        background-color: rgba($aqua, 0.20);
+      }
     }
   }
   
@@ -96,12 +106,20 @@ SettingsContainer {
       cursor: pointer;
 
       &:hover {
-        background-color: $aqua;
+        &:not(.disabled) {
+          background-color: $aqua;
+        }
+      }
+
+      &.disabled {
+        cursor: default;
+        background-color: rgba($tertiary, 0.40);
       }
 
       &.selected {
         background-color: $blue;
       }
+      
 
       align-items: center;
       justify-content: center;
@@ -138,11 +156,18 @@ SettingsContainer {
               height: 100%;
               cursor: pointer;
               background-color: $tertiary;
-              
+
               &:hover {
-                background-color: $aqua;
+                &:not(.disabled) {
+                  background-color: $aqua;
+                }
               }
-              
+
+              &.disabled {
+                cursor: default;
+                background-color: rgba($tertiary, 0.40);
+              }
+
               &.selected {
                 background-color: $blue;
               }

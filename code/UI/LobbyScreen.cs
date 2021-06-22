@@ -49,6 +49,7 @@ namespace QuizNight.UI
 			if ( visible )
 			{
 				PlayerList.UpdatePlayers();
+				SettingsContainer.PlayerReady( Local.Pawn as GamePlayer );
 			}
 		}
 	}

@@ -22,7 +22,9 @@ namespace QuizNight
 			Color.Parse("#78350F").Value,
 			Color.Parse("#FFFFFF").Value,
 		};
-		
+
+		public bool IsHost => GetClientOwner().NetworkIdent == 1;
+
 		/// <summary>
 		/// Called when the player spawns.
 		/// </summary>
@@ -40,6 +42,7 @@ namespace QuizNight
 			{
 				PlayerColor = GetUniqueColor();
 			}
+
 		}
 
 		/// <summary>
